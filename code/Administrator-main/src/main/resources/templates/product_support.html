@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+  <head>
+    <title>Product Department</title>
+</head>
+<body>
+    <h1>Product Department</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date</th>
+                <th>Query</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="entity : ${entities}">
+                <td th:text="${entity.id}"></td>
+                <td th:text="${entity.name}"></td>
+                <td th:text="${entity.email}"></td>
+                <td th:text="${entity.date}"></td>
+                <td th:text="${entity.query}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
